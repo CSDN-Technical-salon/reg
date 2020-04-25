@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+
+eureka:
+  instance:
+    hostname: reg
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+    #集群指向其它eureka
+      #defaultZone: http://eureka7002.com:7002/eureka/
+    #单机就是7001自己
+      defaultZone: http://127.0.0.1:8761/eureka/
